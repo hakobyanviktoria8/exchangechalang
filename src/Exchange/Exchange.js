@@ -118,7 +118,7 @@ const Exchange=(props)=>{
             <form onSubmit={handleSubmit}>
                 {/*have money*/}
                 <label>
-                    I have:
+                    Convert
                     <input type="number" min="1" value={inputValueHave} onChange={handleChangeInputHave} />
 
                     <select value={selectValueHave} onChange={handleChangeSelectHave}>
@@ -129,8 +129,8 @@ const Exchange=(props)=>{
                 </label>
 
                 {/*want exchange*/}
-                <label>
-                    I want:
+                <label className={"label"}>
+                    to
                     <input type="text" readOnly={true}  value={inputValueWant} onChange={handleChangeInputWant}  placeholder={0.00}/>
 
                     <select value={selectValueWant} onChange={handleChangeSelectWant}>

@@ -19,11 +19,15 @@ h1{
     color: #7b11ff;
 }
 label{
-    width: 24rem;
+    width: 26rem;
     display: inline-block;
     font-size: 2rem;
     text-align: center;
     color: #7b11ff;
+}
+.label{
+    width: 20rem;
+    text-align: left;
 }
 input{
     padding: .3rem;
