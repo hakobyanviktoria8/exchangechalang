@@ -8,7 +8,7 @@
 }
 .Exchange{
     margin: 4rem auto;
-    width: 50rem;
+    width: 60rem;
     background: azure;
     border: 1px solid #daecff;
     text-align: center;
@@ -19,15 +19,11 @@ h1{
     color: #7b11ff;
 }
 label{
-    width: 26rem;
+    width: 28rem;
     display: inline-block;
     font-size: 2rem;
     text-align: center;
     color: #7b11ff;
-}
-.label{
-    width: 20rem;
-    text-align: left;
 }
 input{
     padding: .3rem;
@@ -38,7 +34,7 @@ input{
 select{
     padding: .3rem;
     font-size: 1.5rem;
-    width: 7rem;
+    width: 12rem;
 }
 .button{
     width: 15rem;
@@ -59,7 +55,7 @@ img{
 .message{
     width: 100%;
     text-align: center;
-    height: 3rem;
+    height: 5.5rem;
     font-size: 1.2rem;
 }
 hr{

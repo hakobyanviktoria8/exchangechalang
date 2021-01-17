@@ -42,38 +42,38 @@ const Exchange=(props)=>{
     const [inputValueWant,setInputValueWant] = useState("");
     const [inputValueHaveRates,setInputValueHaveRates] = useState({});
     const flagsObj={
-        "CAD":CAD,
-        "HKD":HKD,
-        "ISK":ISK,
-        "PHP":PHP,
-        "DKK":DKK,
-        "HUF":HUF,
-        "CZK":CZK,
-        "AUD":AUD,
-        "RON":RON,
-        "SEK":SEK,
-        "IDR":IDR,
-        "INR":INR,
-        "BRL":BRL,
-        "RUB":RUB,
-        "HRK":HRK,
-        "JPY":JPY,
-        "THB":THB,
-        "CHF":CHF,
-        "SGD":SGD,
-        "PLN":PLN,
-        "BGN":BGN,
-        "TRY":TRY,
-        "CNY":CNY,
-        "NOK":NOK,
-        "NZD":NZD,
-        "ZAR":ZAR,
-        "USD":USD,
-        "MXN":MXN,
-        "ILS":ILS,
-        "GBP":GBP,
-        "KRW":KRW,
-        "MYR":MYR
+        "CAD":[CAD, "CAD dollar", "C$"],
+        "HKD":[HKD,"HKD dollar","HK$"],
+        "ISK":[ISK,"ISK króna","Íkr"],
+        "PHP":[PHP,"peso","₱"],
+        "DKK":[DKK, "DKK krone", "Kr"],
+        "HUF":[HUF, "forint", "Ft"],
+        "CZK":[CZK, "koruna", "Kč"],
+        "AUD":[AUD, "AUD dollar", "A$"],
+        "RON":[RON, "RON leu", "lei"],
+        "SEK":[SEK, "SEK krona", "kr"],
+        "IDR":[IDR, "rupiah", "Rp"],
+        "INR":[INR, "rupee", "₹"],
+        "BRL":[BRL, "real", "R$"],
+        "RUB":[RUB, "ruble", "₽"],
+        "HRK":[HRK, "kuna", "kn"],
+        "JPY":[JPY, "yen", "¥"],
+        "THB":[THB, "baht", "฿"],
+        "CHF":[CHF, "franc", "Fr"],
+        "SGD":[SGD, "SGD dollar", "S$"],
+        "PLN":[PLN, "złoty", " zł"],
+        "BGN":[BGN, "lev", "Лв"],
+        "TRY":[TRY, "lira", "₺"],
+        "CNY":[CNY, "renminbi", "¥"],
+        "NOK":[NOK, "NOK krone", "kr"],
+        "NZD":[NZD, "NZD dollar", "N$"],
+        "ZAR":[ZAR, "rand", "R"],
+        "USD":[USD, "US dollar", "$"],
+        "MXN":[MXN, "peso", "Mex$"],
+        "ILS":[ILS, "Shekel", "₪"],
+        "GBP":[GBP, "sterling", "£"],
+        "KRW":[KRW, "won", "₩"],
+        "MYR":[MYR, "ringgit", "RM"]
     };
 
     useEffect(() => {
@@ -118,35 +118,37 @@ const Exchange=(props)=>{
             <form onSubmit={handleSubmit}>
                 {/*have money*/}
                 <label>
-                    Convert
+                    I have
                     <input type="number" min="1" value={inputValueHave} onChange={handleChangeInputHave} />
 
                     <select value={selectValueHave} onChange={handleChangeSelectHave}>
                         {Object.keys(values).sort().map(value =>
-                            <option key={value} value={value}>{value}</option>
+                            <option key={value} value={value}>{flagsObj[value][1]}</option>
                        )}
                     </select>
                 </label>
 
                 {/*want exchange*/}
                 <label className={"label"}>
-                    to
+                    I want
                     <input type="text" readOnly={true}  value={inputValueWant} onChange={handleChangeInputWant}  placeholder={0.00}/>
 
                     <select value={selectValueWant} onChange={handleChangeSelectWant}>
                         {Object.keys(values).sort().map(value =>
-                            <option key={value} value={value}>{value}</option>
+                            <option key={value} value={value}>{flagsObj[value][1]}</option>
                        )}
                     </select>
                 </label>
                 <br/>
-
-                <img src={flagsObj[selectValueHave]} alt=""/>
+                <img src={flagsObj[selectValueHave][0]} alt=""/>
                 <input type="submit" value="Exchange" className={"button"}/>
-                <img src={flagsObj[selectValueWant]} alt=""/>
+                <img src={flagsObj[selectValueWant][0]} alt=""/>
             </form>
             <div className={"message"}>
-                <p style={{display:inputValueWant?"block":"none"}}>Your <b>{inputValueHave} {selectValueHave} </b>will currently buy you <b>{inputValueWant} {selectValueWant}</b></p>
+                <p>You can see the result here!</p><br/>
+                <p style={{display:inputValueWant?"block":"none"}}>
+                    Your <b>{inputValueHave} {flagsObj[selectValueHave][2]} </b>will currently buy you <b>{inputValueWant} {flagsObj[selectValueWant][2]}</b>
+                </p>
             </div>
             <hr/>
             <div className={"footer"}>
