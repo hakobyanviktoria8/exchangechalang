@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/exchangechalang/static/css/main.78658e63.chunk.css",
-    "main.js": "/exchangechalang/static/js/main.c6629397.chunk.js",
-    "main.js.map": "/exchangechalang/static/js/main.c6629397.chunk.js.map",
+    "main.css": "/exchangechalang/static/css/main.1bfdf37f.chunk.css",
+    "main.js": "/exchangechalang/static/js/main.a6e930df.chunk.js",
+    "main.js.map": "/exchangechalang/static/js/main.a6e930df.chunk.js.map",
     "runtime-main.js": "/exchangechalang/static/js/runtime-main.12993e28.js",
     "runtime-main.js.map": "/exchangechalang/static/js/runtime-main.12993e28.js.map",
     "static/js/2.48f4ee7f.chunk.js": "/exchangechalang/static/js/2.48f4ee7f.chunk.js",
     "static/js/2.48f4ee7f.chunk.js.map": "/exchangechalang/static/js/2.48f4ee7f.chunk.js.map",
     "index.html": "/exchangechalang/index.html",
-    "static/css/main.78658e63.chunk.css.map": "/exchangechalang/static/css/main.78658e63.chunk.css.map",
+    "static/css/main.1bfdf37f.chunk.css.map": "/exchangechalang/static/css/main.1bfdf37f.chunk.css.map",
     "static/js/2.48f4ee7f.chunk.js.LICENSE.txt": "/exchangechalang/static/js/2.48f4ee7f.chunk.js.LICENSE.txt",
     "static/media/AUD.8484d4c4.png": "/exchangechalang/static/media/AUD.8484d4c4.png",
     "static/media/CAD.6adff756.jpg": "/exchangechalang/static/media/CAD.6adff756.jpg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.12993e28.js",
     "static/js/2.48f4ee7f.chunk.js",
-    "static/css/main.78658e63.chunk.css",
-    "static/js/main.c6629397.chunk.js"
+    "static/css/main.1bfdf37f.chunk.css",
+    "static/js/main.a6e930df.chunk.js"
   ]
 }
